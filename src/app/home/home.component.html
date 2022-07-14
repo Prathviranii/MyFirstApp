@@ -1,0 +1,34 @@
+
+<!-- STRING INTERPOLATION -->
+<h1>Hiiiii ....This is {{title}}</h1>
+<h3>{{random_number}} My name is {{name}}</h3>
+<img src="assets/image.png" height="100px" width="100px" alt="jQuery"/>
+<br>
+
+
+<!-- PROPERTY BINDING -->
+<img [src]="image" alt="CSS" height="100px" width="100px"/><br>
+
+
+<!-- EVENT BINDING -->
+<button (click)="onClick()">This is Event Binding</button>
+<br><br>
+
+
+<button (click)="onClick1()" [ngStyle]="{'color':mycolor}">This is Event Binding1</button>
+<br><br>
+
+<!-- ngModel Directive for 2-way binding -->
+<input [(ngModel)]="random_number" type="text"  >
+<br><br>
+
+<h4>{{random_number}}</h4>
+<ul>
+    <li *ngFor="let user of users" [ngStyle]="{'color':mycolor}">
+        {{user.userid}} - {{user.username}}
+    </li>
+</ul>
+
+<input [(ngModel)]="mycolor" type="text"/>
+<div [ngStyle]="{'color':mycolor}">Change the  text Color</div> 
+<br>
